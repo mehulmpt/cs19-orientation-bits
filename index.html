@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+
+		<style>
+		.LogoAnimation{width:350px}@media only screen and (max-width:760px){.LogoAnimation{width:100%}}.LogoAnimation .screen{-webkit-transition:all .85s ease-in-out;transition:all .85s ease-in-out;stroke-opacity:0;-webkit-transform:scale(2.25,1.33) rotate(0);transform:scale(2.25,1.33) rotate(0);stroke-width:5px}.LogoAnimation .background{fill:#282c34}.LogoAnimation .logoInner{-webkit-transform:scale(1);transform:scale(1);-webkit-transition:all .85s ease-in-out;transition:all .85s ease-in-out;-webkit-transition-delay:50ms;transition-delay:50ms}.LogoAnimation.mobile2 .logoInner,.LogoAnimation.mobile .logoInner{-webkit-transform:scale(.4);transform:scale(.4)}.LogoAnimation.desktop .logoInner{-webkit-transform:scale(.5);transform:scale(.5)}.LogoAnimation.laptop .logoInner{-webkit-transform:scale(.35);transform:scale(.35)}.LogoAnimation.full .screen{stroke-opacity:0;-webkit-transform:scale(2.25,1.33) rotate(0);transform:scale(2.25,1.33) rotate(0);opacity:1;-webkit-transition:none;transition:none}.LogoAnimation.mobile .screen{stroke-opacity:1;-webkit-transform:scale(1) rotate(0);transform:scale(1) rotate(0);opacity:1;stroke-width:5px}.LogoAnimation.desktop .screen{stroke-opacity:1;-webkit-transform:scale(1.125,1.1) rotate(-90deg);transform:scale(1.125,1.1) rotate(-90deg);opacity:1;stroke-width:8px}.LogoAnimation.laptop .screen{stroke-opacity:1;-webkit-transform:scale(.83) rotate(-90deg);transform:scale(.83) rotate(-90deg);opacity:1;stroke-width:5px}.LogoAnimation.mobile2 .screen{stroke-opacity:1;opacity:1;stroke-width:5px;-webkit-transform:scale(1) rotate(-180deg);transform:scale(1) rotate(-180deg)}.LogoAnimation.full2 .screen{stroke-opacity:0;-webkit-transform:scale(2.25,1.33) rotate(-180deg);transform:scale(2.25,1.33) rotate(-180deg)}.LogoAnimation:not(.mobile):not(.mobile2) .speaker{opacity:0;-webkit-transform:scaleX(0);transform:scaleX(0)}.LogoAnimation:not(.desktop) .stand,.LogoAnimation:not(.laptop) .base{-webkit-transform:scaleX(0);transform:scaleX(0)}.LogoAnimation .base,.LogoAnimation .speaker,.LogoAnimation .stand{-webkit-transition:all .85s ease-in-out;transition:all .85s ease-in-out}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Web Development</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+						<svg class="LogoAnimation mobile" width="350" height="350" xmlns="http://www.w3.org/2000/svg" viewBox="-200 -200 400 400"><clipPath id="screen"><rect class="screen undefined" rx="3%" width="180" height="300" x="-90" y="-150" fill="none" stroke="gray"></rect></clipPath><rect x="-25" y="120" width="50" height="25" rx="2" fill="white" stroke="none" class="stand"></rect><polygon points="-125,90 125,90 160,145 -160,145" fill="white" stroke="white" stroke-width="5" stroke-linejoin="round" class="base"></polygon><rect class="screen background" rx="3%" width="180" height="300" x="-90" y="-150" stroke="none"></rect><g clip-path="url(#screen)" class="logo"><line x1="-30" x2="30" y1="130" y2="130" stroke="white" stroke-width="8" stroke-linecap="round" class="speaker"></line></g><rect class="screen undefined" rx="3%" width="180" height="300" x="-90" y="-150" fill="none" stroke="white"></rect></svg>
+					<h2>Introduction To <br />Web Development</h2>
+				</section>
+
+				<script>
+					const el = document.querySelector('svg.LogoAnimation')
+					const classes = ['desktop', 'laptop', 'mobile']
+					let i = 0
+					setInterval(() => {
+						el.setAttribute('class', 'LogoAnimation '+classes[i%classes.length])
+						++i
+					}, 2000)
+				</script>
+
+				<section>
+					<h2>About Me</h2>
+					<ul>
+						<li class="fragment">Author of "Learning ECMAScript"</li>
+						<li class="fragment">Author of book on React (title not decided)</li>
+						<li class="fragment">codedamn</li>
+						<li class="fragment">Past freelancer on fiverr (fiverr.com/mehulmpt)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Web Development</h2>
+					<ul>
+						<li class="fragment">Code what web designers came up with</li>
+						<li class="fragment">Different roles</li>
+						<li class="fragment">Front-end developer</li>
+						<li class="fragment">Back-end developer</li>
+						<li class="fragment">Full-stack developer</li>
+					</ul>
+				</section>
+
+				<section>
+					<table class="reveal">
+						<tr>
+							<th>Task</th>
+							<th>Role</th>
+						</tr>
+						<tr class="fragment">
+							<td>Designing a page</td>
+							<td>Web Designer</td>
+						</tr>
+						<tr class="fragment">
+							<td>Building a "subscription box"</td>
+							<td>Front-end developer</td>
+						</tr>
+						<tr class="fragment">
+							<td>Emailing "Hello World" to new subscriber</td>
+							<td>Back-end developer</td>
+						</tr>
+						<tr class="fragment">
+							<td>Doing above two tasks</td>
+							<td>Full-stack developer</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<h2>Front-end Developer</h2>
+					<ul>
+						<li class="fragment">Developing awesome webpages</li>
+						<li class="fragment">Make JavaScript your friend</li>
+						<li class="fragment">HTML5/CSS3 for layouts and fun</li>
+						<li class="fragment">(Optional) Pick a framework - React/Vue/Angular</li>
+						<li class="fragment">Unlimited online resources - use Google</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Back-end Developer (extended)</h2>
+					<ul>
+						<li class="fragment">Doing image processing, implementing cron jobs, writing application algorithms, etc. (depending what your company do)</li>
+						<li class="fragment">Working and scaling database operations (registration/login)</li>
+						<li class="fragment">Reverse proxies - proxy for servers - nginx</li>
+						<li class="fragment">Load balancing/Auto scaling</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Back-end</h2>
+					<ul>
+						<li class="fragment">Node (JS Runtime on server)</li>
+						<li class="fragment">PHP</li>
+						<li class="fragment">Python/Django/Flask</li>
+						<li class="fragment">Ruby/Ruby on rails</li>
+						<li class="fragment">Firebase? - Backend-as-a-Service</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>How to start?</h2>
+					<ul>
+						<li class="fragment">Think about something you want to build</li>
+						<li class="fragment">For example, stone-paper-scissors</li>
+						<li class="fragment">Look up ways</li>
+						<li class="fragment">Work for building it!</li>
+						<li class="fragment">Eventually, learn and make your ideas more complicated</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Thank you</h1>
+					<p>mehulmpt@gmail.com</p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+
+				transition: 'concave',
+				transitionSpeed: 'slow',
+
+				// Parallax background image
+	//parallaxBackgroundImage: "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg",
+
+// Parallax background size
+//parallaxBackgroundSize:  "2100px 900px", //- currently only pixels are supported (don't use % or auto)
+
+// Number of pixels to move the parallax background per slide
+// - Calculated automatically unless specified
+// - Set to 0 to disable movement along an axis
+//parallaxBackgroundHorizontal: 200,
+//parallaxBackgroundVertical: 50,
+
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+				]
+			});
+
+			Reveal.addEventListener( 'ready', () => {
+//				Reveal.slide(100)
+			});
+
+			(new MutationObserver(function(mutations, observer) {
+				mutations.reduce(function(accumulator, current) {
+					return accumulator.concat(Array.prototype.slice.call(
+						current.addedNodes));
+				}, []).forEach(function(el) {
+					if(/video/i.test(el.tagName)) {
+						el.controls = true;
+					}
+				});
+			})).observe(document.body, {
+				childList: true,
+				subtree: true
+			});
+
+		</script>
+	</body>
+</html>
